@@ -1,0 +1,78 @@
+<aside class="leftSide ">
+<div class="container me-0 h-100">
+  <ul class="nav flex-column h-100 justify-content-evenly">
+    <li class="nav-item my-2 mx-auto">
+      <%= link_to root_path, class:"nav-link px-1 mx-auto ms-md-0"  do %>
+        <div class="text-white h3">
+          <i class="bi bi-twitter-x"></i>
+        </div>
+      <%end%>
+    </li>
+
+    <li class="nav-item">
+      <%= link_to root_path, class:"nav-link d-inline-flex w-100 px-1 py-0" do %>
+        <div class="mx-auto mx-auto mx-md-1 d-flex text-white">
+          <i class="bi bi-house"></i>
+          <span class="ms-1">Home</span>
+        </div>
+      <%end%>
+    </li>
+    <li class="nav-item">
+      <%= link_to search_tweets_path, class:"nav-link d-inline-flex w-100 px-1 py-0" do %>
+        <div class="mx-auto mx-auto mx-md-1 d-flex text-white">
+          <i class="bi bi-search"></i>
+          <span class="ms-1">Search</span>
+        </div>
+      <%end%>
+    </li>
+
+    <li class="nav-item">
+      <%= link_to root_path, class:"nav-link d-inline-flex w-100 px-1 py-0 disabled" do %>
+        <div class="mx-auto mx-auto mx-md-1 d-flex text-white">
+          <i class="bi bi-hash"></i>
+          <span class="ms-1">Trends</span>
+        </div>
+      <%end%>
+    </li>
+    <li class="nav-item">
+      <%= link_to root_path, class:"nav-link d-inline-flex w-100 px-1 py-0 disabled" do %>
+        <div class="mx-auto mx-auto mx-md-1 d-flex text-white">
+          <i class="bi bi-people"></i>
+          <span class="ms-1">Communities</span>
+        </div>
+      <%end%>
+    </li>
+    <li class="nav-item">
+      <%= link_to root_path, class:"nav-link d-inline-flex w-100 px-1 py-0 disabled" do %>
+        <div class="mx-auto mx-auto mx-md-1 d-flex text-white align-items-end">
+          <i class="bi bi-person"></i>
+          <span class="ms-1">Profile</span>
+        </div>
+      <%end%>
+    </li>
+    <li class="nav-item">
+      <%= link_to about_path, class:"nav-link d-inline-flex w-100 px-1 py-0" do %>
+        <div class="mx-auto mx-auto mx-md-1 d-flex text-white align-items-end">
+          <i class="bi bi-cookie"></i>
+          <span class="ms-1">About</span>
+        </div>
+      <%end%>
+    </li>
+
+
+    <li class="nav-item my-5">
+      <%= link_to new_tweet_path, class:"" do %>
+      <div class="d-inline-flex w-100 p-0">
+        <div class="d-md-none">
+          <i class="bi bi-feather btn btn-primary rounded-circle"></i>
+        </div>
+        <span class="btn btn-primary rounded-pill w-100" >
+          <span class="ms-1 bg-primary text-center w-100">Post</span>
+        </span>
+      </div>  
+      <%end%>
+    </li>
+  </ul>
+</div>
+</aside>
+

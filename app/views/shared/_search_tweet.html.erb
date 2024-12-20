@@ -1,0 +1,18 @@
+<!-- SEARCH BAR -->
+<div class="mb-3">
+  <%= form_tag(search_tweets_path, method: :get, id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], 
+      class: "form-control flex-wrap bg-dark text-white", 
+      style: "overflow-y: hidden; resize: none;", 
+      placeholder: "Search" %>
+  <% end %>
+</div>
+
+<script>
+  document.getElementById("search-form").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      document.getElementById("search-form").submit();
+    }
+  });
+</script>

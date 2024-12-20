@@ -1,0 +1,17 @@
+
+  <header class="d-flex py-3 ">
+    <% if current_page?(root_path) %>
+      <%= link_to root_path, class:"btn w-50 bg-transparent fs-6 text-white my-0" do%>
+        <span class="border-bottom border-primary border-5 h-100">For You</span> 
+      <%end%>
+      <%= link_to "Following", "#", class:"btn w-50 bg-transparent fs-6 text-white disabled border-0"%>      
+
+    <% else %>
+    <div class="d-flex justify-content-start w-100 ">
+      <%= link_to :back do %>
+        <i class="bi bi-arrow-left mx-3 fs-6 text-white"></i>
+      <%end%>
+    <% end %>
+            </div>
+  </header>
+

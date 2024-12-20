@@ -1,0 +1,29 @@
+<% content_for :title, "Tweet" %>
+
+<%= render "card_tweet", tweet: @tweet %>
+
+<div class="container-fluid m-0 ">    
+    <div class="my-3 d-flex">
+        <i class="bi bi-person-circle me-2"></i>
+        <input type="text" class="form-control flex-wrap bg-dark text-white" placeholder="Post your reply"/>
+    </div>
+</div>
+
+<article class="container pb-3 px-0 bg-none border-top border-bottom ">
+    <div class="card border-0 p-0 bg-dark text-start">
+        <div class="card-header border-0 d-flex text-white">
+            <i class="bi bi-person-circle"></i>
+            <span class="card-title ms-2 border-0 fs-6 text-white">
+                user replier
+                <span class="text-light">@acount.alias · 1h</span>
+            </span>
+        </div>
+        <div class="card-body">
+            <p class="card-text border-0 text-white">
+                user feedback
+            </p>
+        </div>
+      </div>
+</article>
+
+

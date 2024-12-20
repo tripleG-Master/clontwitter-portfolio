@@ -1,0 +1,10 @@
+{
+    "application.js": "/packs/js/application.js",
+    "application.css": "/packs/css/application.css",
+    "entrypoints": {
+      "application": {
+        "js": ["application.js"],
+        "css": ["application.css"]
+      }
+    }
+  }

@@ -1,0 +1,36 @@
+
+
+<section>
+
+<%= form_with(model: tweet) do |form| %>
+<div class="container-fluid m-0 ">    
+    <div class="mb-3 flex-wrap">
+    <%= form.text_field :user, value: "user test", class:"d-none" %>
+    <%=form.text_area :content, maxlength:140, rows: 3,
+        type:"text",
+        required: true,
+        class:"form-control flex-wrap bg-dark text-white",
+        style: "overflow-y: hidden; resize: none;",
+        placeholder:"What is happening?!"
+    %>
+
+    </div>
+    <div class="row">
+        <div class="d-flex justify-content-evenly align-items-center text-primary">
+            <i class="bi bi-image-fill"></i>
+            <i class="bi bi-filetype-gif"></i>
+            <i class="bi bi-list-ul"></i>
+            <i class="bi bi-emoji-smile"></i>
+            <i class="bi bi-calendar-date"></i>
+            <i class="bi bi-geo-alt"></i>
+            <div class="d-flex justify-content-end">
+            <%= form.submit "Post",
+                class:"btn btn-primary rounded-pill"
+            %>
+        </div>
+        </div>
+    </div>
+</div>
+<% end %>
+
+</section>

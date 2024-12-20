@@ -1,0 +1,24 @@
+<% content_for :title, "Tweets" %>
+
+<section class="my-1">
+  <%= render "form_tweet", tweet: @tweet %>
+</section>
+
+<section class="tweets-container container-fluid py-2">
+
+  <% @tweets.each do |tweet|%>
+    <%= link_to tweet_path(tweet), class:"w-100 text-decoration-none" do %>
+        <% render "card_tweet",tweet:tweet %>
+    <%end%>
+  <%end%>
+
+</section>
+
+<section class="container">
+  <%= will_paginate @tweets, 
+    previous_label: "Previous", 
+    next_label: "More tweets", 
+    class:"d-flex justify-content-evenly" 
+  %>
+</section>
+

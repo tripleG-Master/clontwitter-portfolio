@@ -1,0 +1,28 @@
+<% content_for :title, "About" %>
+
+<section class="my-1">
+    <h1 class="display-1 text-center">About</h1>
+</section>
+
+<section>
+    <% @content.each do |p|%>
+    <p class="p-3"><%= p %></p>
+    <%end%>
+</section>
+
+<section class="container mt-2 mb-5">
+    
+    <h2 class="display-2 text-center"> My Links</h2>
+    
+    <div class="d-flex justify-content-center gap-5 my-2 p-2" >
+        <% @links.each do |link| %>
+        <a href=<%=link[:url]%> class="btn btn-outline-<%=link[:color]%>" target='_blank'>
+            <div class="d-flex flex-column bg-transparent">
+                <i class="bg-transparent <%= link[:icon]%> <%=link[:color]%> "></i>
+                <span class='bg-transparent fs-3 text-white'><%= link[:title]%></span>
+            </div>
+        </a>
+        <% end %>
+    </div>
+    
+</section>

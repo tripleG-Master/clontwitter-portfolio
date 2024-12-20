@@ -1,0 +1,18 @@
+<% content_for :title, "Search tweets" %>
+
+    <section class="container-fluid px-2">
+        <%= render "shared/search_tweet"%>
+    </section>
+
+    <section class="tweets-container container-fluid py-2">
+
+    <% if @tweets%>
+    <% @tweets.each do |tweet|%>
+        <%= link_to tweet_path(tweet), class:"w-100 text-decoration-none" do %>
+            <% render "card_tweet",tweet:tweet %>
+        <%end%>
+    <%end%>
+    <%end%>
+    </section>
+
+    
